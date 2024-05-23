@@ -1,0 +1,13 @@
+.DogList-back {
+    font-size: 2rem;
+    padding: 2rem;
+    
+    text-align: center;
+}
+
+.DogList-dog {
+    font-size: 4rem;
+    padding: 2rem;
+    display: block;
+    text-align: center;
+}

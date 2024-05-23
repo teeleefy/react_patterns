@@ -1,0 +1,32 @@
+.DogDetails{
+    width: 65vw;
+    margin: 0 auto;
+    
+}
+.DogDetails-back {
+    font-size: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.DogDetails-dog {
+    font-size: 4rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+.DogDetails-img{
+    display: inline-block;
+    float: left;
+    width: 25vw;
+}
+#facts{
+    display: inline-block;
+    float: left;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
