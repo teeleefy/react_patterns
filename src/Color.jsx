@@ -1,10 +1,24 @@
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import './Color.css';
 
 function Color({colors, setBackgroundColor}){
     const {name} = useParams();
     const color = colors.find(color => color.name === name);
+    let navigate = useNavigate();
+
+    useEffect(function checkColorName(){
+        if(!color){
+            navigate('/colors');
+            }}, [color, navigate])
+    
+
+    if(!color){
+        return null;
+    }
+
+
+
     const h1Style = color.name === "black" ? "white" : "black";
     setBackgroundColor(color.rgb);
     return(
