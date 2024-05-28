@@ -1,22 +1,21 @@
 import { Link, useParams, useNavigate} from "react-router-dom";
-import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 import './DogDetails.css';
 
 function DogDetails({dogs}){
     const {name} = useParams();
-    // const [dog, setDog] = useState({});
     let dog = dogs.find(dog => dog.name === name);
+    let navigate = useNavigate();
+
+    useEffect(function checkDogName(){
+        if(!dog){
+            navigate('/dogs');
+            }}, [dog, navigate])
     
-    // let navigate = useNavigate();
-    // console.log(dog)
-    // useEffect(function checkDogName(){
-        
-    //     let dogObj = dogs.find(dog => dog.name === name);
-            // setDog(dogObj)
-    //     if(dogObj === undefined){
-    //     navigate('/dogs')
-    // } 
-    //         }, [dog])
+
+    if(!dog){
+        return null;
+    }
     
     return(
         <>
